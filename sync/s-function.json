@@ -40,7 +40,14 @@
       }
     }
   ],
-  "events": [],
+  "events": [{
+    "name": "nightlySync",
+    "type": "schedule",
+    "config": {
+      "enabled": true,
+      "schedule": "rate(5 minutes)"
+    }
+  }],
   "environment": {
     "SERVERLESS_PROJECT": "${project}",
     "SERVERLESS_STAGE": "${stage}",
