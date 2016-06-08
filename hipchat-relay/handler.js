@@ -6,7 +6,7 @@ var hipchat = new HipChatClient(config.hipchat.token);
 module.exports.handler = function(event, context, cb) {
 
   // validate event
-  if (!event.params.message) {
+  if (!event.message) {
     throw 'message is required!';
   }
 
@@ -14,23 +14,23 @@ module.exports.handler = function(event, context, cb) {
   var msg = {
     room_id : config.hipchat.room_id,
     from : config.hipchat.user,
-    message : event.params.message
+    message : event.message
   };
 
-  if (event.params.message_format) {
-    msg.message_format = event.params.message_format;
+  if (event.message_format) {
+    msg.message_format = event.message_format;
   }
 
-  if (event.params.notify) {
-    msg.notify = event.params.notify;
+  if (event.notify) {
+    msg.notify = event.notify;
   }
 
-  if (event.params.color) {
-    msg.color = event.params.color;
+  if (event.color) {
+    msg.color = event.color;
   }
 
   // send message
-  hipchat.api.rooms.message(msg, function(err, res) {
+  return hipchat.api.rooms.message(msg, function(err, res) {
     if (err) {
       throw err;
     }
