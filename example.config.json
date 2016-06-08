@@ -1,4 +1,9 @@
 {
   "slack_token": "xxxx-slack-token-xxxx",
-  "firebase": "https://[firebase-project].firebaseio.com"
+  "firebase": "https://[firebase-project].firebaseio.com",
+  "hipchat": {
+    "token": "[hipchat-token]",
+    "room_id": "[hipchat-room-id]",
+    "user": "[posting-bot-name]"
+  }
 }
