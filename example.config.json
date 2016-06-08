@@ -5,5 +5,9 @@
     "token": "[hipchat-token]",
     "room_id": "[hipchat-room-id]",
     "user": "[posting-bot-name]"
+  },
+  "slack": {
+    "webhook": "[Slack-incoming-webhook]",
+    "user": "[Slack-bot-username] (Optional)"
   }
 }
