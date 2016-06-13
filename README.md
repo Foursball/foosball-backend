@@ -6,7 +6,9 @@ To install serverless run `npm i -g serverless`. Afterwards run `serverless proj
 ## Local Testing
 A function can be locally tested by running `serverless function run [function-name]` from this directory. This will ingest the `event.json` payload and output the result of the function. This emulates a request through the AWS API Gateway and a REST response.
 
-There is also `example.config.json` file which needs to be copied to `config.json` and updated to contain real values. You can generate a Slack API token at https://api.slack.com/docs/oauth-test-tokens.
+There is also `example.config.json` file which needs to be copied to `dev-config.json` (make one for each environment) and updated to contain real values. You can generate a Slack API token at https://api.slack.com/docs/oauth-test-tokens.
+
+**NOTE:** Before deploying make sure to copy the appropriate config to `config.json` before deploying to an environment.
 
 To test commands which use your user ID make sure to update the **user_id** section in `event.json` with your user ID which can be retrieved from a test method such as https://api.slack.com/methods/auth.test/test.
 
