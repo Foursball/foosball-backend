@@ -12,6 +12,7 @@
   "dependencies": {
     "bluebird": "^3.4.0",
     "hipchat-client": "^1.0.5",
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "serverless-cors-plugin": "^0.4.1"
   }
 }
