@@ -1,3 +1,5 @@
 {
-  "message": "Test Slack message"
+  "params": {
+    "message": "Test Slack message"
+  }
 }

@@ -3,8 +3,11 @@ var request = require('request');
 
 module.exports.handler = function(event, context, cb) {
   var payload = {
-    "text": event.message
+    "text": event.params.message
   };
+
+  console.log('Payload:');
+  console.log(JSON.stringify(payload, null, 2));
 
   if (config.slack.user) {
     payload.username = config.slack.user;

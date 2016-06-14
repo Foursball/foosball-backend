@@ -1,3 +1,5 @@
 {
-  "message": "Test HipChat message"
+  "params": {
+    "message": "Test HipChat message"
+  }
 }
